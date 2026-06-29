@@ -1,0 +1,54 @@
+import java.util.*;
+class Account{
+	int ac;
+	String hn;
+	Account(int ac,String hn)
+	{
+		this.ac=ac;
+		this.hn=hn;
+	}
+	void display()
+	{
+		System.out.println(ac);
+		System.out.println(hn);;
+	}
+}
+class savingsAccount extends Account
+{
+	double balance;
+	savingsAccount(int ac,String hn,double balance)
+	{
+		super(ac,hn);
+		this.balance=balance;
+	}
+	void calculateInterest()
+	{
+		double interest=balance*0.40;
+		display();
+		System.out.println(balance);
+		System.out.println(interest);
+	}
+}
+class currentAccount extends Account
+{
+	currentAccount(int ac,String hn)
+	{
+		super(ac,hn);
+	}
+	void calculateServiceCharge()
+	{
+		display();
+		System.out.println("Service Charge: 500");
+	}
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+    	savingsAccount s=new savingsAccount(1001,"Hari",50000);
+    	currentAccount c=new currentAccount(2001,"Arun");
+    	s.calculateInterest();
+    	c.calculateServiceCharge();
+    	
+    }
+}
