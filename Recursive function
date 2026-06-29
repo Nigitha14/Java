@@ -1,0 +1,50 @@
+//
+import java.util.Scanner;
+class Main {
+    static int max(int[] arr, int n) {
+        int maximum = arr[0];   
+
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > maximum) {
+                maximum = arr[i];
+            }
+        }
+        return maximum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();      
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.println(max(arr, n));
+        sc.close();
+    }
+}
+*********************************************************************************************************************************************
+//
+import java.util.*;
+public class Main
+{
+	static Boolean Prime(int n,int i) {
+		if (n <= 1)
+			return false;
+		if (n % i == 0)
+			return false;
+		if (i * i > n)
+			return true;
+
+		return Prime(n, i + 1);
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println(Prime(n, 2));
+
+	}
+}
