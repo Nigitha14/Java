@@ -1,0 +1,66 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    try{
+	        int a=10,b=0;
+	        int result =a/b;
+	        System.out.println("result "+ result);
+	    }
+	    catch(ArithmeticException e){
+	        System.out.println("Error:");
+	    }
+	}
+}
+***********************************************************************************************************************************************************************************************************************
+// Using finally keyword
+public class Main
+{
+	public static void main(String[] args) {
+	    try{
+	        int a=10/0;
+	    }
+	    catch(ArithmeticException e){
+	        System.out.println("Catch: "+e);
+	    }
+	    finally{
+	        System.out.println("Finally block always executed");
+	    }
+	}
+}
+********************************************************************************************************************************************************************************************************************
+public class Main {
+	public static void main(String[] args) {
+		int arr[] = {10, 20, 30};
+		try {
+			System.out.println(arr[4]); 
+		} catch (Exception e) {
+			System.out.println("Invalid array index");
+		} finally {
+			System.out.println("Finally Always executed.");
+		}
+		System.out.println("Program continues");
+	}
+}
+**********************************************************************************************************************************************************************
+//using throws and throw
+class  AgeException extends Exception {
+}
+class Main {
+	static void checkAge (int age) throws AgeException {
+		if (age < 18) {
+			throw new AgeException();
+		} else {
+			System.out.println("Eligible to vote ");
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			int age=19;
+			checkAge(age);
+		} catch (AgeException e) {
+			System.out.println(" Not eligible to vote!");
+		} finally {
+			System.out.println("Finally block executed.");
+		}
+	}
+}
