@@ -1,0 +1,75 @@
+abstract class VehicleService {
+    String customerName;
+    String VehicleNumber;
+    String serviceType;
+
+    VehicleService(String customerName, String VehicleNumber, String serviceType) {
+        this.customerName = customerName;
+        this.VehicleNumber = VehicleNumber;
+        this.serviceType = serviceType;
+    }
+
+    abstract double calculateServiceCharge();
+    abstract void display();
+
+    void displayServiceDetails() {
+        System.out.println("Customer Name: " + customerName);
+        System.out.println("Vehicle Number: " + VehicleNumber);
+        System.out.println("Service Type: " + serviceType);
+    }
+}
+
+class CarService extends VehicleService {
+    String vehicleType;
+    double sparePartsCost;
+
+    CarService(String customerName, String VehicleNumber, String serviceType, String vehicleType, double sparePartsCost) {
+        super(customerName, VehicleNumber, serviceType);
+        this.vehicleType = vehicleType;
+        this.sparePartsCost = sparePartsCost;
+    }
+
+    double calculateServiceCharge() {
+        return 2000 + sparePartsCost;
+    }
+
+    void display() {
+        displayServiceDetails();
+        System.out.println("Vehicle Category: " + vehicleType);
+        System.out.println("Spare Parts Cost: " + sparePartsCost);
+        System.out.println("Total Service Charge: " + calculateServiceCharge());
+    }
+}
+
+class BikeService extends VehicleService {
+    String vehicleType;
+    double sparePartsCost;
+
+    BikeService(String customerName, String VehicleNumber, String serviceType, String vehicleType, double sparePartsCost) {
+        super(customerName, VehicleNumber, serviceType);
+        this.vehicleType = vehicleType;
+        this.sparePartsCost = sparePartsCost;
+    }
+
+    double calculateServiceCharge() {
+        return 800 + sparePartsCost;
+    }
+
+    void display() {
+        displayServiceDetails();
+        System.out.println("Vehicle Category: " + vehicleType);
+        System.out.println("Spare Parts Cost: " + sparePartsCost);
+        System.out.println("Total Service Charge: " + calculateServiceCharge());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        VehicleService service;
+        service = new CarService("ARUN", "TN10AB1234", "General Service", "Car", 3500);
+        service.display();
+        System.out.println();
+        service = new BikeService("PRIYA", "TN11CD5678", "Oil Service", "Bike", 1200);
+        service.display();
+    }
+}
