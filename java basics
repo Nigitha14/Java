@@ -1,0 +1,124 @@
+import java.util.*;
+class Main
+{
+	public static void main(String []args)
+	{
+		String n=" hi word ";
+		String n1="hi";
+		String n2="JAVA";
+		// 1
+		System.out.println("Length: "+n.length());
+		System.out.println("Char: "+n.charAt(6));
+		// 2
+		System.out.println(n.toUpperCase());
+		System.out.println(n2.toLowerCase());
+		//3
+		System.out.println(n.trim()+" ");
+		// 4
+		System.out.println(n.substring(2,6));
+		// 5
+		System.out.println(n.contains("hi"));
+		System.out.println(n.startsWith(" hi "));
+		System.out.println("endsWith: "+n.endsWith(" world"));
+		// 6
+		System.out.println("equal: "+n.equals("hi"));
+		System.out.println("equalsIgnoreCase: "+n1.equalsIgnoreCase("HI"));
+		// 7
+		System.out.println("Compare:"+ n.compareTo(n2));
+		// 8
+		System.out.println("index: "+ n.indexOf('o'));
+		System.out.println("lastindex: "+n.lastIndexOf('o'));
+		// 9
+		System.out.println("replace:" +n.replace("hi","Hello"));
+		System.out.println("all replace: "+ n.replaceAll(" ",""));
+		// 10
+		String[] parts=n.trim().split(" ");
+		System.out.println("Split Word: ");
+		for(String word: parts) {
+			System.out.println(word);
+		}
+		// 11
+		String joined = String.join("-","one","two","three");
+		System.out.println("joined:"+ joined);
+		// 12
+		String empty="";
+		String blank="bh";
+		System.out.println("empty: "+empty.isEmpty());
+		System.out.println("blank"+blank.isBlank());
+		// 13
+		char[] chars = n.toCharArray();
+		System.out.print("Char Array: ");
+		for (char c: chars) {
+			System.out.print(c + " ");
+		}
+		System.out.println();
+        // 14
+        int num = 100;
+        System.out.println("String.valueOf: "+ String.valueOf(num));
+        // 15
+        System.out.println("Repeat 3 times: "+ n.repeat(3));
+        
+	}
+}
+********************************************************************************************************************************************************************
+
+to add the first and last number
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args){
+        int a= 1234;
+        if(a>999 && a<10000){
+            int f = a%10;
+            int l = a/1000;
+            System.out.println(f+l);
+        }
+        else System.out.println("Invalid");
+       
+    }
+}
+********************************************************************************************************************************************************************
+// to add the sum of single digits
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int n=12345;
+		while(n>=10) {
+			int sum=0;
+			while(n>0) {
+				sum+=n%10;
+				n/=10;
+			}
+			n=sum;
+		}
+		System.out.println(n);
+// others method
+        if(n<=9) System.out.println(n);
+        else if(n%9==0) System.out.println("9");
+        else System.out.println(n%9);
+	}
+}
+
+********************************************************************************************************************************************************************
+// to fin the kaprekar number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int temp=n;
+		int sqr=n*n;
+		int count=0;
+		while(n!=0) {
+		    n/=10;
+			count++;
+		}
+		int power =(int)Math.pow(10,count);
+		int fhalf=sqr/power;
+		int shalf=sqr%power;
+		System.out.println(temp==(fhalf+shalf)?"Kaprekar": "Not Kaprekar");
+	}
+}
