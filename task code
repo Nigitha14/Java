@@ -1,0 +1,87 @@
+// 1.Write a program to check whether a number is even or odd
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the Table No:");
+		int n=sc.nextInt();
+		for(int i=1; i<=10; i++){
+		    System.out.println(n +"*"+i+"="+n*i);
+		}
+	}
+}
+
+// 2.Write a program to print the multiplication table of a number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number to Check Even or Odd: ");
+        int n=sc.nextInt();
+        if(n%2==0){
+            System.out.println(n+" is Even");
+        }
+        else{
+            System.out.println(n+" is odd");
+        }
+    } 
+}
+
+// 3.Write a program to check whether a number is prime or not
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int flag = 0; 
+        if (num <= 1) {
+            System.out.println(num + " is NOT a Prime number.");
+        } 
+        else {
+            for (int i = 2; i < num; i++) {  
+                if (num % i == 0) {
+                    flag = 1; 
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(num + " is a Prime number.");
+            } 
+            else {
+                System.out.println(num + " is NOT a Prime number.");
+            }
+        }
+    }
+}
+
+// 4.Write the  program for Armstrong in java
+import java.util.Scanner;
+ public class Main {
+    public static void main(String[] args) {
+        int n = new java.util.Scanner(System.in).nextInt();
+        int t = n, sum=0;
+        while(t!=0){ 
+            int d=t%10; 
+            sum += d*d*d; 
+            t/=10; 
+        }
+        System.out.println(sum==n ? "Armstrong" : "Not Armstrong");
+    }
+ }
+// 5.Write the program in palindrome in java
+
+import java.util.Scanner;
+ public class Main {
+    public static void main(String[] args) {
+        int n = new java.util.Scanner(System.in).nextInt();
+        int t = n, rev = 0;
+        while(n!=0){ 
+            rev = rev*10 + n%10; 
+            n/=10; 
+        }
+        System.out.println(t==rev ? "Palindrome" : "Not Palindrome");
+    }
+}
