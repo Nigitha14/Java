@@ -1,0 +1,396 @@
+To conver cent to dollars
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args){
+        int a= 102; //Dollar1 
+        int b= 55;  //cent1
+        int c = 48; //Dollar2
+        int d = 45;  //cent 2
+        int Dollar =(a+c);
+        int Cent =(b+d);
+        if(Cent>=100){
+            Dollar+=Cent/100;
+            Cent=Cent%100;
+            System.out.println("Dollar"+Dollar);
+            System.out.println(Cent);
+        }
+        
+    }
+}
+*************************************************************************************************************************************************************
+// share percentage for menbers
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int input1 = 1000;
+	    int input2 = 50;
+	    int input3 = 40;
+	    System.out.println("Total treasure:"+input1);
+	    int A_percentage=(input1*input2)/100;
+	    int B_percentage=(A_percentage*input3)/100;
+	    System.out.println("A percentage:"+A_percentage);
+	    System.out.println("B percentage:"+B_percentage);
+	    int remaining = input1-(A_percentage+B_percentage);
+	    int Share = remaining/3;
+	    System.out.println("C Share"+Share);
+	    System.out.println("D Share"+Share);
+	    System.out.println("E Share"+Share);
+	}
+}
+********************************************************************************************************************************************************************
+// Matrix program 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int b=6;
+	   int r =(b-1)/3;
+	   int c =(b-1)%3;
+	   System.out.println("r"+r+"c"+c);
+	}
+}
+********************************************************************************************************************************************************************
+// to convert the integers to float
+public class Main
+{
+	public static void main(String[] args) {
+		int i1 = 2,i2=4,i3=10,i4=15;
+		float a=(i1+i3)/2 , b=(i2+i4)/2f;
+		System.out.println(a+","+b);
+	}
+}
+********************************************************************************************************************************************************************
+// to find the distance 
+public class Main
+{
+	public static void main(String[] args) {
+		int i1 = 5,i2=10,i3=3,i4=4;
+		int dis1=i1-i3;
+		int dis2=i2-i4;
+		double total_dis=Math.sqrt(dis1*dis1+dis2*dis2);
+		System.out.println((int)total_dis);
+		
+	}
+}
+********************************************************************************************************************************************************************
+//Mango problem to find the number present in the c and r
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int i1=5,i2=i1;
+	   int b=25;
+	   int r =(b-1)/5;
+	   int c =(b-1)%5;
+	   if(b>25){
+	       System.out.println("Invalid");
+	   }
+	   else if(c==0 || c==4 || c%b==1){
+	        System.out.println("Mango Tree");
+	   }
+	   else{
+	       System.out.println("Not Mango Tree");
+	   }
+	}
+}
+// other method
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);  
+	   int a=sc.nextInt(); 
+	   int b=sc.nextInt(); 
+	   int m=sc.nextInt();  
+	   if(m>a*b) System.out.println("Invalid"); 
+	   else{ 
+	       if(m <= a || m%a == 1||m%a == 0) System.out.println("Mango tree"); 
+	       else System.out.println("Not Mango");
+	   }
+	}
+}
+******************************************************************************************************************************************************************
+// leap year
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int y = new Scanner(System.in).nextInt();
+        boolean leap = (y % 400 == 0) || (y % 4 == 0 && y % 100 != 0);
+        System.out.println(leap ? "Leap Year" : "Not Leap Year");
+	}
+}
+*****************************************************************************************************************************************************************
+// to find the sequnce number based on input
+public class Main
+{
+	public static void main(String[] args) {
+		int n= new java.util.Scanner(System.in).nextInt();
+		for(int i=1;i<=n;i++){
+		    if(i%2==0){
+		        int res=(i*i)-2;
+		        System.out.print(res+" ");
+		    }
+		    else{
+		        int res=(i*i)-1;
+		        System.out.print(res+" ");
+		    }
+		}
+	}
+}
+******************************************************************************************************************************************************************
+// Collatz conjecture sequence
+public class Main
+{
+	public static void main(String[] args) {
+		int n= new java.util.Scanner(System.in).nextInt();
+		int temp=0;
+		while(n>1) {
+			if(n%2==0) {
+				n=n/2;
+				System.out.println(n);
+				temp++;
+			}
+			else{
+			    n=3*n+1;
+			    System.out.println(n);
+			    temp++;
+			}
+			
+		}
+		
+		System.out.println("total value:"+temp);
+		
+	}
+}
+*******************************************************************************************************************************************************************
+// to find the second largest number and find the GCD
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		int i1=10;
+		int i2=2;
+		int i3=9;
+		int i=1;
+		if(i1>i2 && i1<i3){
+		    System.out.println(i1);
+		}
+		else if(i2>i1 && i2<i3){
+		    System.out.println(i2);
+		}
+		else
+		    System.out.println(i3);
+		 
+		while(i>=0){
+		    i++;
+		    if(i1%i==0 && i2%i==0 && i3%i==0){
+		        System.out.println("key is"+i);
+		        break;
+		    }
+		}
+		
+	}
+}
+*******************************************************************************************************************************************************************
+// to calculate the total crr and trr
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int total_balls=300;
+		int total_runs=375;
+		int runs_scored=78;
+		int balls_bowled=45;
+		
+		int n_o_overs =total_balls/6;
+		System.out.println("n_o_overs:"+n_o_overs);
+		
+		float o_finished= (balls_bowled/6)+(balls_bowled%6)*0.1f;
+		System.out.println("o_finished:"+o_finished);
+		
+		float crr = runs_scored/o_finished;
+	    System.out.printf("CRR: %.1f%n", crr);
+		
+		float trr = (float)total_runs/n_o_overs;
+		System.out.println("trr: "+trr);
+		
+		if(crr==trr||crr>trr){
+		    System.out.println("Win");
+		}
+		else
+		System.out.println("Loss");
+		
+	}
+}
+*******************************************************************************************************************************************************************
+// to find the fibonacci series index value
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=new java.util.Scanner(System.in).nextInt();
+	    int a=0,b=1,c=0;
+		if (n==1){
+		    System.out.println("0");
+		} 
+		if(n==2){
+		    System.out.println("1");
+		}
+		for(int i=3;i<=n;i++){
+		    c=a+b;
+		    a=b;
+		    b=c;
+		}
+		System.out.println(c);
+	}
+}
+*******************************************************************************************************************************************************************
+//
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		
+		for(int i=x;i<=y;i++){
+		    int split1=i/10;
+		    int split2=i%10;
+		    
+		    int split_sum=split1+split2;
+		    int split_multiply=split1*split2;
+		    
+		    int final_sum=split_sum+split_multiply;
+		    
+		    if(final_sum==i){
+		        System.out.print(i+" ");
+		    }
+		}
+
+		
+	}
+}
+*******************************************************************************************************************************************************************
+// to check the Month date by using year
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int year=new java.util.Scanner(System.in).nextInt();
+		int month=new java.util.Scanner(System.in).nextInt();
+		int leap =0;
+		if(year>1900 && year<=9999&&month>1 && month<=12) {
+			if(year%400==0||year%4==0&&year%100!=0) {
+				leap=year;
+			}
+			if(month==2&&leap==year) {
+				System.out.println("29");
+			}
+			else if(month==4||month==6||month==9||month==11) {
+				System.out.println("30");
+			}
+			else if(month==2) {
+				System.out.println("28");
+			}
+			else {
+				System.out.println("31");
+			}
+		}
+		else{
+		    System.out.println("0 Days");
+		}
+	}
+}
+***********************************************************************************************************************************************
+//
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int num=new java.util.Scanner(System.in).nextInt();
+		int total=1;
+		for(int i=1;i<=num;i++){
+		    total=num%1000*1;
+		}
+		System.out.println(total);
+		
+	}
+}
+*************************************************8
+import java.util.*;
+class Main {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the Acc no:");
+		int ac=1234567;
+		int blc=7000;
+		if(ac>999999&&ac<99999999) {
+			System.out.println("Acc Type");
+			System.out.println("1.Saving");
+			System.out.println("2.Current");
+			System.out.print("Select Acc Type:");
+			int ent_acc_type=sc.nextInt();
+			switch(ent_acc_type) {
+			case 1:
+			case 2:
+				System.out.println("1.Withdraw");
+				System.out.println("2.Deposit");
+				System.out.println("3.Bal Enquiry");
+				System.out.print("Select the Transction Type:");
+				int at=sc.nextInt();
+				switch(at) {
+				case 1:
+					System.out.print("Enter the Withdraw Amount:");
+					int wi=sc.nextInt();
+					if(wi<=blc) {
+						if (ent_acc_type == 1 && (blc - wi) < 1000) {
+							System.out.println("Minimum balance for Saving Account is 1000");
+						}
+						else if(ent_acc_type ==2) {
+							if((blc-wi)<5000) {
+								System.out.println("Minimum balance for Saving Account is 5000");
+							}
+							else {
+								wi=wi+15;
+								blc = blc - wi;
+								System.out.println("Withdrawal Successful");
+								System.out.println("Available Balance: " + blc);
+							}
+						}
+						else {
+							wi=wi+10;
+							blc = blc - wi;
+							System.out.println("Withdrawal Successful");
+							System.out.println("Available Balance: " + blc);
+						}
+					}
+					else {
+						System.out.println("Insufficient Balance");
+					}
+					break;
+				case 2:
+					System.out.print("Enter the Deposit Amount:");
+					int de=sc.nextInt();
+					if(de<=15000){
+					    de=()
+					}
+					
+					
+					
+					
+				default:
+					System.out.println("Invalid Transction Type");
+				}
+			}
+
+		}
+		else {
+			System.out.println("Invalid Acc no");
+		}
+	}
+}
