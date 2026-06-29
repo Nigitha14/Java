@@ -1,0 +1,61 @@
+// Single inheritene
+
+import java.util.*;
+class Student{
+    int rollNo;
+    String sName;
+    Student(int rollNo,String sName){
+        this.rollNo=rollNo;
+        this.sName=sName;
+    }
+}
+class Result extends Student{
+    int m1;
+    int m2;
+    int m3;
+    Result(int rollNo,String sName,int m1,int m2,int m3){
+        super(rollNo,sName);
+        this.m1=m1;
+        this.m2=m2;
+        this.m3=m3;
+    }
+    double calculateTotal(){
+        return m1+m2+m3;
+    }
+    double average(){
+        return calculateTotal()/3;
+    }
+    String grade(){
+        if(average()>=90){
+            return "A";
+            
+        }else if(average()>=75){
+            return "B";
+            
+        }else if(average()>=50){
+            return "C";
+            
+        }else{
+            return "D";
+        }
+    }
+    void display(){
+        System.out.println("Roll No:" + rollNo);
+        System.out.println("Name:" + sName);
+        System.out.println("Total:" + calculateTotal());
+        System.out.println("Average:" + average());
+        System.out.println("Grade:" + grade());
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        Result n=new Result(101,"Nigitha",87,90,78);
+        n.display();
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+        
