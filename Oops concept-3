@@ -1,0 +1,176 @@
+//oops grade
+
+class Student {
+	String sName;
+	int m1;
+	int m2;
+	int m3;
+	Student(String sName, int m1, int m2, int m3) {
+		this.sName = sName;
+		this.m1 = m1;
+		this.m2 = m2;
+		this.m3 = m3;
+	}
+	int calculateTotal(){
+	    return m1+m2+m3;
+	}
+	double calculateAverage(){
+	    return calculateTotal()/3.0;
+	}
+	void display() {
+		System.out.println("Student Name: "+sName);
+		System.out.println("Total: "+(m1+m2+m3));
+		int avg = (m1+m2+m3)/3;
+		System.out.println("Average: "+avg);
+		if(avg>=90) {
+			System.out.println("Grade: A");
+		} else if(avg>=75) {
+            System.out.println("Grade: B");
+		}else if(avg>=50){
+		    System.out.println("Grade: C");
+		}else{
+		    System.out.println("Grade: D");
+		}
+	}
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Student s = new Student("sweatha", 88, 85, 90);
+	    s.display();
+	}
+}
+----------------------------------------------------------------
+//oops Bill sum
+
+import java.util.*;
+class Electricity
+{
+	String cname;
+	int unit;
+	int bill = 0;
+	void calculateBill(){
+	    if(unit>0 && unit<=100){
+	        bill = unit * 2;
+	    }else if(unit>100 && unit<=200){
+	        bill = unit * 3;
+	    }else{
+	        bill = unit * 5;
+	    }
+	    System.out.println(cname+"-"+bill);
+	}
+}
+public class Main {
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+		Electricity s1=new Electricity();
+		s1.cname = sc.next();
+		s1.unit=sc.nextInt();
+		s1.calculateBill();
+
+	} 
+}
+
+-------------------------------------------------------------------------------
+//oops object for mobile
+
+import java.util.*;
+class Mobile{
+    
+    String brand;
+    int model;
+    int price;
+    void display(){
+        System.out.println(brand+" "+model+" "+price);
+    }
+}
+public class Main {
+    public static void main(String[]args) {
+        Mobile m=new Mobile();
+        m.brand="vivo";
+        m.model=15;
+        m.price=15000;
+        m.display();
+        
+        Mobile m1=new Mobile();
+        m1.brand="Realme";
+        m1.model=10;
+        m1.price=18000;
+        m1.display();
+        
+        Mobile m2=new Mobile();
+        m2.brand="redmi";
+        m2.model=25;
+        m2.price=30000;
+        m2.display();
+        
+        Mobile m3=new Mobile();
+        m3.brand="Oppo";
+        m3.model=25;
+        m3.price=35000;
+        m3.display();
+    }
+}
+
+--------------------------------------------------------------------------------------
+//oops object create
+
+import java.util.*;
+class Student{
+    int rollNo;
+    String name;
+    String department;
+    }
+    public class Main {
+	public static void main(String[]args) {
+	    
+		Student s=new Student();
+		s.rollNo=123;
+		s.name="One";
+		s.department="CSE";
+		
+		System.out.println(s.rollNo+" "+s.name+" "+s.department);
+		
+		Student s2=new Student();
+		s2.rollNo=234;
+		s2.name="Two";
+		s2.department="IOT";
+	
+		System.out.println(s2.rollNo+" "+s2.name+" "+s2.department);
+		
+		Student s3=new Student();
+		s3.rollNo=456;
+		s3.name="Three";
+		s3.department="ECE";
+	
+		System.out.println(s3.rollNo+" "+s3.name+" "+s3.department);
+	}
+}
+
+--------------------------------------------------------------------------------------
+//oops
+
+import java.util.*;
+class Student{
+    int rollNo;
+    String name;
+    String department;
+    }
+    public class Main {
+	public static void main(String[]args) {
+	    
+		Student s=new Student();
+		s.rollNo=123;
+		s.name="One";
+		s.department="CSE";
+		
+		System.out.println(s.rollNo+" "+s.name+" "+s.department);
+		Student s2=new Student();
+		s2.rollNo=234;
+		s2.name="Two";
+		s2.department="IOT";
+	
+		System.out.println(s2.rollNo+" "+s2.name+" "+s2.department);
+	}
+}
