@@ -1,0 +1,207 @@
+// Basic Multilevel program in opps
+class GrandFather{
+    void land(){
+        System.out.println("100 acers");
+    }
+}
+class Father extends GrandFather{
+    void bike(){
+        System.out.println("BMW");
+    }
+}
+class Child extends Father{
+    void money(){
+        System.out.println("200000");
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+		Child a = new Child();
+		a.land();
+		a.bike();
+		a.money();
+	}
+}
+***********************************************************************************************************************************************************************
+// Multilevel program in opps
+import java.util.*;
+
+class Bike{
+    void Types(){
+        System.out.println("---------------------");
+        System.out.println("TYPES OF BIKES WE HAVE:");
+       
+        System.out.println("1. EV ");
+        System.out.println("2. Petrol engines");
+        System.out.println("Disel engine");
+         System.out.println("------------------------");
+    }
+}
+
+class Ev extends Bike{
+    void Evs(){
+        System.out.println("EV MODEL:");
+        
+        System.out.println("1. ABC");
+        System.out.println("2. DEF");
+        System.out.println("3. GHI");
+        System.out.println("4. JKL");
+        
+       
+    }
+}
+
+class Prop extends Ev{
+    void Dis(){
+        System.out.println("---------------------------");
+        System.out.println("PROPERTIES OF EV:");
+        System.out.println("1.No petrol or disel needed");
+        System.out.println("2.Uses only the electrical power");
+        System.out.println("3.Easy to handle");
+        System.out.println("4.Autotamic available");
+           System.out.println("-------------------------------");
+    }
+}
+
+class Rate extends Prop{
+    void rat(){
+        System.out.println();
+       
+        System.out.println("PRICE OF 4 WHEELERS:");
+        System.out.println("Showroom price    :Rs.12,45,000/-");
+        System.out.println("Modification price:Rs.   25,000/-");
+        System.out.println("Tax               :Rs. 2,50,000/-");
+        System.out.println("On road price     :Rs.15,20,000/-");
+        System.out.println("-------------------------------");
+    }
+}
+
+class Main{
+    public static void main(String []args){
+        Rate obj=new Rate();
+        
+        obj.Types();
+        obj.Evs();
+        obj.Dis();
+        obj.rat();
+    }
+}
+*********************************************************************************************************************************************************************
+// Basic program in h
+// Basic Multilevel program in opps
+class GrandFather{
+    void land(){
+        System.out.println("100 acers");
+    }
+}
+class Father extends GrandFather{
+    void bike(){
+        System.out.println("BMW");
+    }
+}
+class Child extends GrandFather{
+    void money(){
+        System.out.println("200000");
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+		Child a = new Child();
+		a.land();
+		Father b=new Father();
+		b.bike();
+		a.money();
+	}
+}
+******************************************************************************************************************************************************************
+// Overriding problem in opps
+class Student{
+    void san(){
+        System.out.println("Sanjai");
+    }
+}
+class Student1 extends Student{
+    void san(){
+        System.out.println("san");
+    }
+}
+class Student2 extends Student1{
+    void san(){
+        System.out.println("jai");
+    }
+}
+class Main{
+    public static void main (String[] args) {
+        Student2 s=new Student2();
+        s.san();
+    }
+}
+********************************************************************************************************************************************************************
+// method overloading in opps
+class Cal{
+    int add(int a,int b){
+    return a+b;
+    }
+    int add(int a, int b, int c){
+        return a+b+c;
+    }
+    double add(double a,double b){
+        return a+b;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Cal ca= new Cal();
+		System.out.println(ca.add(5,10));
+		System.out.println(ca.add(5,10,15));
+		System.out.println(ca.add(5.5,2.5));
+	}
+}
+********************************************************************************************************************************************************************
+// using private class
+class Person{
+    private String name;
+    
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+}
+public class Main{
+    public static void main (String[] args) {
+        Person p=new Person();
+        p.setName("java");
+        System.out.println(p.getName());
+    }
+}
+********************************************************************************************************************************************************************
+// Abstract Method
+abstract class Bike{
+    abstract void run();
+    void flueType(){
+        System.out.println("Petrol");
+    }
+}
+class Ktm extends Bike{
+    void run(){
+        System.out.println("Ktm is running at 100 km/h");
+    }
+}
+class Bmw extends Bike{
+    void run(){
+        System.out.println("Bmw is running at 170 km/h");
+    }
+}
+public class Main{
+	public static void main(String[] args) {
+		Bike b1 =new Ktm();
+		b1.run();
+		b1.flueType();
+		Bike b2 =new Bmw();
+		b2.run();
+		b2.flueType();
+	}
+}
