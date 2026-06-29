@@ -1,0 +1,118 @@
+//Salary inheritence
+
+import java.util.*;
+class Employee{
+    int eid;
+    String en;
+    Employee(int eid,String en){
+        this.eid=eid;
+        this.en=en;
+    }
+}
+class Salary extends Employee{
+    double bs;
+    Salary(int eid,String en,double bs){
+        super(eid,en);
+        this.bs=bs;
+    }
+    double CNS(){
+        double hra=bs*0.20;
+        double da=bs*0.10;
+        double pf=bs*0.05;
+        return bs+hra+da-pf;
+    }
+    void display(){
+        System.out.println(eid);
+        System.out.println(en);
+        System.out.println(bs);
+        System.out.println(CNS());
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        Salary s=new Salary(101,"Nigitha",300000);
+        s.display();
+    }
+}
+
+-------------------------------------------------------------------------------------------
+//Railway inheritence
+
+import java.util.*;
+class RailwayTicket{
+    String pn;
+    int a;
+    double d;
+    RailwayTicket(String pn,int a,double d){
+        this.pn=pn;
+        this.a=a;
+        this.d=d;
+    }
+    double calculateFare(){
+        double fare=d*2;
+        if(a>=60){
+            fare=fare-(fare*0.30);
+        }
+        return fare;
+    }
+    void show(){
+        System.out.println(pn);
+        System.out.println(a);
+        System.out.println(d);
+        System.out.println(calculateFare());
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        RailwayTicket r=new RailwayTicket("Nigitha",65,200);
+        r.show();
+    }
+}
+    
+--------------------------------------------------------------------------------------------
+
+//Employee
+
+import java.util.*;
+class Employee{
+    int employeeId;
+    String employeename;
+    double basicSalary;
+    Employee(int employeeId,String employeename,double basicSalary){
+        this.employeeId=employeeId;
+        this.employeename=employeename;
+        this.basicSalary=basicSalary;
+    }
+    double calculateHRA(){
+        return basicSalary*0.20;
+    }
+    double calculateDA(){
+        return basicSalary*0.10;
+    }
+    double calculatePF(){
+        return basicSalary*0.05;
+    }
+    double calculateNetSalary(){
+        return basicSalary+calculateHRA()+calculateDA()-calculatePF();
+    }
+    void display(){
+        System.out.println(employeeId);
+        System.out.println(employeename);
+        System.out.println(basicSalary);
+        System.out.println(calculateHRA());
+        System.out.println(calculateDA());
+        System.out.println(calculatePF());
+        System.out.println(calculateNetSalary());
+    }
+}
+public class Main{
+    public static void main(String[]args){
+        Employee e=new Employee(101,"Nigitha",30000);
+        e.display();
+    }
+}
+    
+    
+    
+    
+    
