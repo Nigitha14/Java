@@ -1,0 +1,40 @@
+interface Camera{
+    void takePhoto();
+}
+
+interface MusicPlayer{
+    void PlayMusic();
+}
+
+class SmartPhone implements Camera, MusicPlayer{
+    String brand;
+    int model;
+
+    SmartPhone(String brand, int model){
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void takePhoto(){
+        System.out.println("Take Photo");
+    }
+
+    public void PlayMusic(){
+        System.out.println("Play Music");
+    }
+
+    void display(){
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        SmartPhone s = new SmartPhone("SAMSUNG", 20);
+
+        s.display();
+        s.takePhoto();
+        s.PlayMusic();
+    }
+}
