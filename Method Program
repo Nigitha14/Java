@@ -1,0 +1,188 @@
+// Basic program for Method
+class app{
+    String name;
+    int roll;
+    public void display(){
+        System.out.println("Name: "+name);
+        System.out.println("Rollno: "+roll);
+    }
+}
+class Main{
+    public static void main (String[] args) {
+        app ksr=new app();
+        
+        ksr.name = "Sanjai";
+        ksr.roll = 23;
+        ksr.display();
+    }
+}
+**************************************************************************************************************************************************************************************
+// method without parameter 
+class ksr{
+    
+    public static void add(){
+        int a=10;
+        int b=20;
+        int c=a+b;
+        System.out.println("sum is:"+c);
+        
+    }
+}
+class Main{
+    public static void main (String[] args) {
+        ksr.add();
+
+    }
+}
+************************************************************************************************************************************************************************************************
+// with parameter and without parameter
+class ksr{
+    
+    public static void add(){
+        int a=10;
+        int b=20;
+        int c=a+b;
+        System.out.println("sum is:"+c);
+        
+    }
+    public static void mul(int x,int y){
+        int result=x*y;
+        System.out.println("mul:"+result);
+    }
+}
+class Main{
+    public static void main (String[] args) {
+        System.out.println("without parameter");
+        ksr.add();
+        System.out.println("wiht parameter");
+        ksr.mul(10,20);
+    }
+}
+**********************************************************************************************************************************************************************************************
+// without parameter but returns int
+class ksr{
+    
+    public static int add(){
+        int a=10;
+        int b=20;
+        int c=a+b;
+        return c;
+    }
+}
+class Main{
+    public static void main (String[] args) {
+        int results = ksr.add();
+        System.out.println(results);
+    }
+}
+******************************************************************************************************************************************************************************************
+// with parameter and return type
+class ksr {
+    public static int add(int a, int b) {
+        int c = a + b;
+        return c;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        int result = ksr.add(10, 20);
+        System.out.println("Sum is: " + result);
+    }
+}
+*********************************************************************************************************************************************************************
+// to print the 1 t0 10 table 
+class PrimeNumbers {
+    void printPrimes() {
+        for (int i = 1;i <= 10; i++) {
+            for (int j = 1;j <= 10 ;j++) {
+                System.out.print(i*j+"\t");
+            }
+            System.out.println();
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        PrimeNumbers p= new PrimeNumbers();
+        p.printPrimes();
+    }
+}
+*******************************************************************************************************************************************************************
+//without parameter for factorial
+import java.util.*;
+class vlo{
+    void display(){
+        String str ="Sanjai";
+        int v =0;
+        int con=0;
+        str = str.toLowerCase();
+		for(int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if(ch=='a' || ch=='e' || ch=='i' || ch== 'o'|| ch == 'u') {
+				++v;
+			}
+			else if(ch >= 'a' && ch <= 'z') {
+				++con;
+			}
+		}
+		System.out.println("Vowels: " + v);
+        System.out.println("Consonants: " + con);
+        
+    }
+}
+class Main {
+	public static void main(String[]args) {
+		vlo m=new vlo();
+		m.display();
+		System.out.println();
+	}
+}
+*******************************************************************************************************************************************************************
+// factorial problem without parameter
+import java.util.*;
+class vlo {
+	void display() {
+        Scanner sc=new Scanner(System.in);
+	    int number =sc.nextInt();
+	    int factorial=1;
+		for (int i = 1; i <= number; i++) {
+			factorial *= i;
+		}
+		System.out.println(factorial);
+	}
+}
+class Main {
+	public static void main(String[]args) {
+
+		vlo m=new vlo();
+		m.display();
+		
+	}
+}
+*******************************************************************************************************************************************************************
+// without parameter and with return type for finding biggest number
+import java.util.*;
+class vlo{
+    public int biggest(){
+        int num = 1234;
+        int max=0;
+        while(num>0){
+            int d =num%10;
+            if (d > max) {
+                max = d;
+            }
+            num = num / 10;
+        }
+        
+        return max;
+    }
+            
+}
+class Main{
+    public static void main (String[] args) {
+        vlo m = new vlo();
+        int result = m.biggest();
+        System.out.println("Biggest digit is: " + result);
+    }
+}
