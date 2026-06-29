@@ -1,0 +1,175 @@
+// to find the how many vowels and consonants in a string
+import java.util.*;
+class Main {
+	public static void main (String[] args) {
+		String str="Sanjai ragul";
+		int vowels = 0, consonants = 0;
+		str = str.toLowerCase();
+		for(int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if(ch=='a' || ch=='e' || ch=='i' || ch== 'o'|| ch == 'u') {
+				++vowels;
+			}
+			else if(ch >= 'a' && ch <= 'z') {
+				++consonants;
+			}
+		}
+		System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+
+	}
+}
+********************************************************************************************************************************************************************
+// easy way to find the vowels and consonanats
+import java.util.*;
+class Main {
+	public static void main(String[]args) {
+		String a = "ashwanth";
+		int vowles=0;
+		int consnants=0;
+		for(char c: a.toCharArray()) {
+			if(Character.isLetter(c)) {
+				if("aeiou".indexOf(c)!=-1) {
+					vowles++;
+					System.out.println("vowles" +vowles);
+				}
+				else {
+					consnants++;
+					System.out.println("consnants" + consnants);
+				}
+
+			}
+		}
+		System.out.println();
+	}
+}
+********************************************************************************************************************************************************************
+// string to check the Palindeome are not Palindrome
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String rev = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
+
+        System.out.println(str.equals(rev)? "Palindrome" : "Not Palindrome");
+    }
+}
+********************************************************************************************************************************************************************
+// Get char at index
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        String str="java Exercise!";
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter the index: ");
+        int ind=sc.nextInt();
+        System.out.print("The character at position "+ind+"is: "+str.charAt(ind));
+        
+    }
+}
+********************************************************************************************************************************************************************
+// to Concatenate the string
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        String st1="PHP Exercises and ";
+        String st2="Python Exercises";
+        System.out.println("The concatenated string:"+st1.concat(st2));
+    }
+}
+********************************************************************************************************************************************************************
+// Contains Specified Sequence
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        String str="PHP Exercises and Python Exercises";
+        String str1="an";
+        System.out.println(str.contains(str1));
+    }
+}
+********************************************************************************************************************************************************************
+// using StringBuffer and StringBuilder
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        StringBuilder sb=new StringBuilder("java program ");
+        sb.insert(5,"hello ");
+        System.out.println(sb);
+        
+        StringBuffer sb1=new StringBuffer("java");
+        sb1.append("program");
+        System.out.println(sb1);
+        
+        StringBuffer sb2=new StringBuffer("hello world");
+        sb2.reverse();
+        System.out.println(sb2);
+    }
+}
+********************************************************************************************************************************************************************
+// using stringBuffer to check palindrome or not
+public class Main {
+	public static void main(String[] args) {
+		String str = "madam";
+		StringBuffer sb = new StringBuffer(str);
+		String reversed =sb.reverse().toString();
+		if (str.equals(reversed)) {
+			System.out.println(str +"-> Palindrome");
+		} else {
+			System.out.println(str + "->Not Palindrome");
+		}
+	}
+}
+********************************************************************************************************************************************
+//
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		boolean b=true;
+		int start=0;
+		int end=s.length()-1;
+		while(start<end){
+		    if(s.charAt(start)!=s.charAt(end)){
+		        b=false;
+		        break;
+		    }
+		    start++;
+		    end--;
+		    
+		}
+		System.out.println(b);
+	}
+}
+*********************************************************************************************************************************************
+//
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String a = sc.nextLine(); 
+        String b = sc.nextLine(); 
+
+        int i = 0, j = 0;
+
+        while (i < a.length() && j < b.length()) {
+            if (a.charAt(i) == b.charAt(j)) {
+                j++;
+            }
+            i++;
+        }
+
+        if (j == b.length()) {
+            System.out.println("subsequence");
+        } else {
+            System.out.println("not a subsequence");
+        }
+    }
+}
